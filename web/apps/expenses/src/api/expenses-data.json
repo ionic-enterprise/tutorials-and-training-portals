@@ -1,0 +1,29 @@
+[
+  {
+    "id": "9896bab8-0905-4bcb-9061-4c0c924a73a6",
+    "userId": "ae473c77-16a7-48a7-909c-45ca02990839",
+    "amount": 43.56,
+    "merchant": "Lyft",
+    "date": "2023-09-13T08:23:59.368Z",
+    "note": "From Hotel to Ionic HQ",
+    "type": "Travel"
+  },
+  {
+    "id": "6f00d03b-540f-494a-9fed-62b51f846044",
+    "userId": "ae473c77-16a7-48a7-909c-45ca02990839",
+    "amount": 123.0,
+    "merchant": "Grill43",
+    "date": "2023-09-13T12:00:59.368Z",
+    "note": "Lunch for the team",
+    "type": "Food"
+  },
+  {
+    "id": "d3fa143d-129f-46ef-a833-f8f7ba7a99d8",
+    "userId": "ae473c77-16a7-48a7-909c-45ca02990839",
+    "amount": 34.67,
+    "merchant": "Lyft",
+    "date": "2023-09-13T22:23:59.368Z",
+    "note": "From Ionic HQ to Hotel",
+    "type": "Travel"
+  }
+]
