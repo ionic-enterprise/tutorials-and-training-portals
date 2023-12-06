@@ -34,7 +34,7 @@ Each micro frontend is set to run on a different port; you can run all three web
 Open the iOS project in Xcode:
 
 ```bash
-cd ./ios/Jobsync
+cd ./ios
 xed Jobsync.xcodeproj
 ```
 
