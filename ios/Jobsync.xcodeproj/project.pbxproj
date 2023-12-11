@@ -9,16 +9,32 @@
 /* Begin PBXBuildFile section */
 		07E5CF542B1FA64300C64621 /* JobsyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CF532B1FA64300C64621 /* JobsyncApp.swift */; };
 		07E5CF562B1FA64300C64621 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CF552B1FA64300C64621 /* ContentView.swift */; };
-		07E5CF582B1FA64400C64621 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E5CF572B1FA64400C64621 /* Assets.xcassets */; };
+		07E5CF582B1FA64400C64621 /* AppIcon.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E5CF572B1FA64400C64621 /* AppIcon.xcassets */; };
 		07E5CF5B2B1FA64400C64621 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E5CF5A2B1FA64400C64621 /* Preview Assets.xcassets */; };
+		07E5CFB82B239B3800C64621 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFB72B239B3800C64621 /* DashboardView.swift */; };
+		07E5CFBB2B23B27E00C64621 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E5CFBA2B23B27E00C64621 /* Theme.xcassets */; };
+		07E5CFBE2B23B52400C64621 /* Color+Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFBD2B23B52400C64621 /* Color+Theme.swift */; };
+		07E5CFD22B27894C00C64621 /* MicroFrontend.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFD12B27894C00C64621 /* MicroFrontend.swift */; };
+		07E5CFD42B2789C500C64621 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFD32B2789C500C64621 /* DashboardViewModel.swift */; };
+		07E5CFD62B278C4A00C64621 /* MicroFrontendTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFD52B278C4A00C64621 /* MicroFrontendTile.swift */; };
+		07E5CFDA2B27A94400C64621 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E5CFD92B27A94400C64621 /* Icons.xcassets */; };
+		07E5CFDD2B27AD1600C64621 /* MicroFrontends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFDC2B27AD1600C64621 /* MicroFrontends.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		07E5CF502B1FA64300C64621 /* Jobsync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jobsync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E5CF532B1FA64300C64621 /* JobsyncApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsyncApp.swift; sourceTree = "<group>"; };
 		07E5CF552B1FA64300C64621 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
-		07E5CF572B1FA64400C64621 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		07E5CF572B1FA64400C64621 /* AppIcon.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = AppIcon.xcassets; sourceTree = "<group>"; };
 		07E5CF5A2B1FA64400C64621 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		07E5CFB72B239B3800C64621 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		07E5CFBA2B23B27E00C64621 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
+		07E5CFBD2B23B52400C64621 /* Color+Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Theme.swift"; sourceTree = "<group>"; };
+		07E5CFD12B27894C00C64621 /* MicroFrontend.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroFrontend.swift; sourceTree = "<group>"; };
+		07E5CFD32B2789C500C64621 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		07E5CFD52B278C4A00C64621 /* MicroFrontendTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroFrontendTile.swift; sourceTree = "<group>"; };
+		07E5CFD92B27A94400C64621 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
+		07E5CFDC2B27AD1600C64621 /* MicroFrontends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroFrontends.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,9 +67,13 @@
 		07E5CF522B1FA64300C64621 /* Jobsync */ = {
 			isa = PBXGroup;
 			children = (
+				07E5CFDB2B27ACED00C64621 /* Portals */,
+				07E5CFD02B27893100C64621 /* Models */,
+				07E5CFBC2B23B51200C64621 /* Utilities */,
+				07E5CFB92B23B26000C64621 /* Resources */,
+				07E5CFB62B239B1600C64621 /* Dashboard */,
 				07E5CF532B1FA64300C64621 /* JobsyncApp.swift */,
 				07E5CF552B1FA64300C64621 /* ContentView.swift */,
-				07E5CF572B1FA64400C64621 /* Assets.xcassets */,
 				07E5CF592B1FA64400C64621 /* Preview Content */,
 			);
 			path = Jobsync;
@@ -65,6 +85,50 @@
 				07E5CF5A2B1FA64400C64621 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		07E5CFB62B239B1600C64621 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				07E5CFB72B239B3800C64621 /* DashboardView.swift */,
+				07E5CFD32B2789C500C64621 /* DashboardViewModel.swift */,
+				07E5CFD52B278C4A00C64621 /* MicroFrontendTile.swift */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		07E5CFB92B23B26000C64621 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				07E5CF572B1FA64400C64621 /* AppIcon.xcassets */,
+				07E5CFBA2B23B27E00C64621 /* Theme.xcassets */,
+				07E5CFD92B27A94400C64621 /* Icons.xcassets */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		07E5CFBC2B23B51200C64621 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				07E5CFBD2B23B52400C64621 /* Color+Theme.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		07E5CFD02B27893100C64621 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				07E5CFD12B27894C00C64621 /* MicroFrontend.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		07E5CFDB2B27ACED00C64621 /* Portals */ = {
+			isa = PBXGroup;
+			children = (
+				07E5CFDC2B27AD1600C64621 /* MicroFrontends.swift */,
+			);
+			path = Portals;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -125,8 +189,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				07E5CFBB2B23B27E00C64621 /* Theme.xcassets in Resources */,
 				07E5CF5B2B1FA64400C64621 /* Preview Assets.xcassets in Resources */,
-				07E5CF582B1FA64400C64621 /* Assets.xcassets in Resources */,
+				07E5CFDA2B27A94400C64621 /* Icons.xcassets in Resources */,
+				07E5CF582B1FA64400C64621 /* AppIcon.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -138,6 +204,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				07E5CF562B1FA64300C64621 /* ContentView.swift in Sources */,
+				07E5CFBE2B23B52400C64621 /* Color+Theme.swift in Sources */,
+				07E5CFD22B27894C00C64621 /* MicroFrontend.swift in Sources */,
+				07E5CFD42B2789C500C64621 /* DashboardViewModel.swift in Sources */,
+				07E5CFDD2B27AD1600C64621 /* MicroFrontends.swift in Sources */,
+				07E5CFD62B278C4A00C64621 /* MicroFrontendTile.swift in Sources */,
+				07E5CFB82B239B3800C64621 /* DashboardView.swift in Sources */,
 				07E5CF542B1FA64300C64621 /* JobsyncApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -275,6 +347,7 @@
 				DEVELOPMENT_TEAM = 9YN2HU59K8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Jobsync/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -304,6 +377,7 @@
 				DEVELOPMENT_TEAM = 9YN2HU59K8;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Jobsync/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
