@@ -19,6 +19,7 @@
 		07E5CFD62B278C4A00C64621 /* MicroFrontendTile.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFD52B278C4A00C64621 /* MicroFrontendTile.swift */; };
 		07E5CFDA2B27A94400C64621 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E5CFD92B27A94400C64621 /* Icons.xcassets */; };
 		07E5CFDD2B27AD1600C64621 /* MicroFrontends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFDC2B27AD1600C64621 /* MicroFrontends.swift */; };
+		07F0E6332B28B742005D00BF /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F0E6322B28B742005D00BF /* Credentials.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		07E5CFD52B278C4A00C64621 /* MicroFrontendTile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroFrontendTile.swift; sourceTree = "<group>"; };
 		07E5CFD92B27A94400C64621 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
 		07E5CFDC2B27AD1600C64621 /* MicroFrontends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroFrontends.swift; sourceTree = "<group>"; };
+		07F0E6322B28B742005D00BF /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 			isa = PBXGroup;
 			children = (
 				07E5CFD12B27894C00C64621 /* MicroFrontend.swift */,
+				07F0E6322B28B742005D00BF /* Credentials.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				07E5CF562B1FA64300C64621 /* ContentView.swift in Sources */,
 				07E5CFBE2B23B52400C64621 /* Color+Theme.swift in Sources */,
 				07E5CFD22B27894C00C64621 /* MicroFrontend.swift in Sources */,
+				07F0E6332B28B742005D00BF /* Credentials.swift in Sources */,
 				07E5CFD42B2789C500C64621 /* DashboardViewModel.swift in Sources */,
 				07E5CFDD2B27AD1600C64621 /* MicroFrontends.swift in Sources */,
 				07E5CFD62B278C4A00C64621 /* MicroFrontendTile.swift in Sources */,
