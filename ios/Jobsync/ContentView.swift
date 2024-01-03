@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct ContentView: View {
-  var body: some View {
-    DashboardView()
-  }
+    @StateObject var credentialsManager = CredentialsManager(http: NetworkManager())
+    
+    var body: some View {
+        Group {
+            if self.credentialsManager.credentials == nil {
+                LoginView()
+            } else {
+                DashboardView()
+            }
+        }.environmentObject(credentialsManager)
+    }
 }
 
 #Preview {
-  ContentView()
+    ContentView()
 }

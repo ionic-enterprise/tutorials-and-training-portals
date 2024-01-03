@@ -7,7 +7,7 @@
 
 import Foundation
 
-let MICRO_FRONTENDS: [MicroFrontend] = [
+let MINI_APPS: [MiniApp] = [
   .init(
     id: "expenses",
     name: "Expenses",

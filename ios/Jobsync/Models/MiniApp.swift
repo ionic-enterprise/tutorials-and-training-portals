@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct MicroFrontend: Identifiable, Hashable {
+struct MiniApp: Identifiable, Hashable {
   var id: String
   var name: String
   var icon: String
