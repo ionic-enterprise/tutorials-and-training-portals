@@ -52,3 +52,15 @@ struct LoginInput: Encodable {
         }
     }
 }
+
+extension CredentialsManager {
+    static let preview: CredentialsManager = {
+        let credentialsManager = CredentialsManager(http: NetworkManager())
+        let credentials = Credentials(
+            accessToken: "8f633ea6-de27-4110-96cf-bc10fa3a0b86",
+            refreshToken: "da5ca0ea-5831-4373-a298-879dfa5a6fcb"
+        )
+        credentialsManager.credentials = credentials
+        return credentialsManager
+    }()
+}

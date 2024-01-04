@@ -7,29 +7,25 @@
 
 import SwiftUI
 
-struct DashboardView: View {
-    let cols = [GridItem(.flexible()), GridItem(.flexible())]
-
+struct DashboardView: View {    
     var body: some View {
         NavigationStack {
-            VStack(alignment: .leading) {
-                
-                ForEach(WebApps.metadata, id: \.name) { mfe in
-                    NavigationLink(value: mfe) {
-                        WebAppCard(app: mfe)
+            VStack {
+                ForEach(WebApps.metadata, id: \.name) { webapp in
+                    NavigationLink(value: webapp) {
+                        WebAppCard(webapp)
                             .padding(.horizontal, 10)
                             .padding(.vertical, 1)
                     }
-                    //.navigationDe
-                    //         .navigationDestination(for: MicroFrontend.self) { mfe in
-                    //              Text("\(mfe.name)")
-                    //          }
+
                 }
-                
                 Spacer()
             }
             .padding(.top, 30)
             .navigationTitle("Dashboard")
+            .navigationDestination(for: WebAppMetadata.self, destination: { webapp in
+                WebAppView(metadata: webapp)
+            })
             .toolbarBackground(Color.white, for: .navigationBar)
             .toolbarBackground(.visible, for: .navigationBar)
             .themedBackground()
@@ -39,4 +35,5 @@ struct DashboardView: View {
 
 #Preview {
     DashboardView()
+        .environmentObject(CredentialsManager.preview)
 }

@@ -8,33 +8,37 @@
 import SwiftUI
 
 struct WebAppCard: View {
-  let app: WebAppMetadata
-  
-  var body: some View {
-    HStack {
-      Image(systemName: app.icon)
-        .frame(width: 48, height: 48)
-        .font(.title)
-        .foregroundColor(.white)
-        .background(.jsPrimary)
-        .cornerRadius(8)
-      VStack(alignment: .leading) {
-        Text(app.displayName)
-          .font(.title2)
-          .fontWeight(.bold)
-          .foregroundColor(.jsNeutralText)
-        Text(app.description)
-          .foregroundColor(.jsNeutralText)
-          .font(.caption)
-      }
-      Spacer()
+    let app: WebAppMetadata
+    
+    init(_ app: WebAppMetadata) {
+        self.app = app
     }
-    .themedCard()
-  }
+    
+    var body: some View {
+        HStack {
+            Image(systemName: app.icon)
+                .frame(width: 48, height: 48)
+                .font(.title)
+                .foregroundColor(.white)
+                .background(.jsPrimary)
+                .cornerRadius(8)
+            VStack(alignment: .leading) {
+                Text(app.displayName)
+                    .font(.title2)
+                    .fontWeight(.bold)
+                    .foregroundColor(.jsNeutralText)
+                Text(app.description)
+                    .foregroundColor(.jsNeutralText)
+                    .font(.caption)
+            }
+            Spacer()
+        }
+        .themedCard()
+    }
 }
 
 #Preview {
-    WebAppCard(app: WebApps.metadata[0])
-    .padding()
-    .themedBackground()
+    WebAppCard(WebApps.metadata[0])
+        .padding()
+        .themedBackground()
 }
