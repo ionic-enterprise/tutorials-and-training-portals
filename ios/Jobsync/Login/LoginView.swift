@@ -18,6 +18,12 @@ struct LoginView: View {
             case .loading:
                 ProgressView()
             default:
+                Image(.logo)
+                    .resizable()
+                    .scaledToFit()
+                    .frame(height: 128)
+                    .padding()
+                    .padding(.bottom, 20)
                 TextField("Username", text: $username)
                     .autocapitalization(.none)
                     .autocorrectionDisabled(true)
@@ -51,11 +57,7 @@ struct LoginView: View {
         Task {
             let username = $username.wrappedValue
             let password = $password.wrappedValue
-            
             await self.credentialsManager.login(username, with: password)
-            if let credentials = self.credentialsManager.credentials {
-                print(credentials)
-            }
         }
     }
     

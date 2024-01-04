@@ -7,6 +7,21 @@
 
 import Foundation
 
+struct Credentials: Decodable {
+  var accessToken: String
+  var refreshToken: String
+  
+  private enum CodingKeys: String, CodingKey {
+    case accessToken = "access_token"
+    case refreshToken = "refresh_token"
+  }
+}
+
+struct LoginInput: Encodable {
+  var username: String
+  var password: String
+}
+
 @MainActor class CredentialsManager: ObservableObject {
     @Published var credentials: Credentials? = nil
     @Published var status: RequestStatus = .success

@@ -15,15 +15,11 @@
 		07E5CF5B2B1FA64400C64621 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E5CF5A2B1FA64400C64621 /* Preview Assets.xcassets */; };
 		07E5CFB82B239B3800C64621 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFB72B239B3800C64621 /* DashboardView.swift */; };
 		07E5CFBB2B23B27E00C64621 /* Theme.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E5CFBA2B23B27E00C64621 /* Theme.xcassets */; };
-		07E5CFD22B27894C00C64621 /* MiniApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFD12B27894C00C64621 /* MiniApp.swift */; };
-		07E5CFD62B278C4A00C64621 /* MiniAppCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFD52B278C4A00C64621 /* MiniAppCard.swift */; };
+		07E5CFD62B278C4A00C64621 /* WebAppCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFD52B278C4A00C64621 /* WebAppCard.swift */; };
 		07E5CFDA2B27A94400C64621 /* Icons.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 07E5CFD92B27A94400C64621 /* Icons.xcassets */; };
-		07E5CFDD2B27AD1600C64621 /* MicroFrontends.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFDC2B27AD1600C64621 /* MicroFrontends.swift */; };
-		07F0E6332B28B742005D00BF /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F0E6322B28B742005D00BF /* Credentials.swift */; };
+		07E5CFDD2B27AD1600C64621 /* WebApps.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CFDC2B27AD1600C64621 /* WebApps.swift */; };
 		07F0E6362B28D503005D00BF /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 07F0E6352B28D503005D00BF /* Alamofire */; };
 		07F0E6382B28D515005D00BF /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F0E6372B28D515005D00BF /* NetworkManager.swift */; };
-		07F0E63A2B28D64E005D00BF /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F0E6392B28D64E005D00BF /* Constants.swift */; };
-		07F0E63C2B2900FB005D00BF /* LoginInput.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F0E63B2B2900FB005D00BF /* LoginInput.swift */; };
 		07F0E63E2B2A2E16005D00BF /* CredentialsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F0E63D2B2A2E16005D00BF /* CredentialsManager.swift */; };
 		07F0E6422B2B4E22005D00BF /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F0E6412B2B4E22005D00BF /* LoginView.swift */; };
 		07F0E6442B2C98D6005D00BF /* View+ThemedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07F0E6432B2C98D6005D00BF /* View+ThemedCard.swift */; };
@@ -39,14 +35,10 @@
 		07E5CF5A2B1FA64400C64621 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		07E5CFB72B239B3800C64621 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		07E5CFBA2B23B27E00C64621 /* Theme.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Theme.xcassets; sourceTree = "<group>"; };
-		07E5CFD12B27894C00C64621 /* MiniApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniApp.swift; sourceTree = "<group>"; };
-		07E5CFD52B278C4A00C64621 /* MiniAppCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniAppCard.swift; sourceTree = "<group>"; };
+		07E5CFD52B278C4A00C64621 /* WebAppCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAppCard.swift; sourceTree = "<group>"; };
 		07E5CFD92B27A94400C64621 /* Icons.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Icons.xcassets; sourceTree = "<group>"; };
-		07E5CFDC2B27AD1600C64621 /* MicroFrontends.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MicroFrontends.swift; sourceTree = "<group>"; };
-		07F0E6322B28B742005D00BF /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
+		07E5CFDC2B27AD1600C64621 /* WebApps.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebApps.swift; sourceTree = "<group>"; };
 		07F0E6372B28D515005D00BF /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
-		07F0E6392B28D64E005D00BF /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		07F0E63B2B2900FB005D00BF /* LoginInput.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginInput.swift; sourceTree = "<group>"; };
 		07F0E63D2B2A2E16005D00BF /* CredentialsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CredentialsManager.swift; sourceTree = "<group>"; };
 		07F0E6412B2B4E22005D00BF /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		07F0E6432B2C98D6005D00BF /* View+ThemedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+ThemedCard.swift"; sourceTree = "<group>"; };
@@ -88,7 +80,6 @@
 				07E5CFDB2B27ACED00C64621 /* Portals */,
 				07F0E6402B2B4E14005D00BF /* Login */,
 				07E5CFB62B239B1600C64621 /* Dashboard */,
-				07E5CFD02B27893100C64621 /* Models */,
 				07E5CFBC2B23B51200C64621 /* Extensions */,
 				07F0E64A2B2C9E16005D00BF /* Utilities */,
 				07E5CFB92B23B26000C64621 /* Resources */,
@@ -111,7 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				07E5CFB72B239B3800C64621 /* DashboardView.swift */,
-				07E5CFD52B278C4A00C64621 /* MiniAppCard.swift */,
+				07E5CFD52B278C4A00C64621 /* WebAppCard.swift */,
 			);
 			path = Dashboard;
 			sourceTree = "<group>";
@@ -135,20 +126,10 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		07E5CFD02B27893100C64621 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				07E5CFD12B27894C00C64621 /* MiniApp.swift */,
-				07F0E6322B28B742005D00BF /* Credentials.swift */,
-				07F0E63B2B2900FB005D00BF /* LoginInput.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
 		07E5CFDB2B27ACED00C64621 /* Portals */ = {
 			isa = PBXGroup;
 			children = (
-				07E5CFDC2B27AD1600C64621 /* MicroFrontends.swift */,
+				07E5CFDC2B27AD1600C64621 /* WebApps.swift */,
 				073B24C42B45E6C400916747 /* PortalView.swift */,
 			);
 			path = Portals;
@@ -166,7 +147,6 @@
 			isa = PBXGroup;
 			children = (
 				07F0E63D2B2A2E16005D00BF /* CredentialsManager.swift */,
-				07F0E6392B28D64E005D00BF /* Constants.swift */,
 				07F0E6372B28D515005D00BF /* NetworkManager.swift */,
 			);
 			path = Utilities;
@@ -254,18 +234,14 @@
 			files = (
 				073B24C52B45E6C400916747 /* PortalView.swift in Sources */,
 				07F0E6382B28D515005D00BF /* NetworkManager.swift in Sources */,
-				07F0E63A2B28D64E005D00BF /* Constants.swift in Sources */,
 				07E5CF562B1FA64300C64621 /* ContentView.swift in Sources */,
-				07E5CFD22B27894C00C64621 /* MiniApp.swift in Sources */,
-				07F0E6332B28B742005D00BF /* Credentials.swift in Sources */,
-				07E5CFDD2B27AD1600C64621 /* MicroFrontends.swift in Sources */,
-				07E5CFD62B278C4A00C64621 /* MiniAppCard.swift in Sources */,
+				07E5CFDD2B27AD1600C64621 /* WebApps.swift in Sources */,
+				07E5CFD62B278C4A00C64621 /* WebAppCard.swift in Sources */,
 				07F0E63E2B2A2E16005D00BF /* CredentialsManager.swift in Sources */,
 				07F0E6442B2C98D6005D00BF /* View+ThemedCard.swift in Sources */,
 				07E5CFB82B239B3800C64621 /* DashboardView.swift in Sources */,
 				07F0E6422B2B4E22005D00BF /* LoginView.swift in Sources */,
 				07F0E6492B2C9C90005D00BF /* View+ThemedBackground.swift in Sources */,
-				07F0E63C2B2900FB005D00BF /* LoginInput.swift in Sources */,
 				07E5CF542B1FA64300C64621 /* JobsyncApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

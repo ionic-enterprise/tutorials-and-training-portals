@@ -14,9 +14,9 @@ struct DashboardView: View {
         NavigationStack {
             VStack(alignment: .leading) {
                 
-                ForEach(MINI_APPS) { mfe in
+                ForEach(WebApps.metadata, id: \.name) { mfe in
                     NavigationLink(value: mfe) {
-                        MiniAppCard(app: mfe)
+                        WebAppCard(app: mfe)
                             .padding(.horizontal, 10)
                             .padding(.vertical, 1)
                     }

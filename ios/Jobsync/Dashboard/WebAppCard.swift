@@ -1,5 +1,5 @@
 //
-//  MFEContentCard.swift
+//  WebAppCard.swift
 //  Jobsync
 //
 //  Created by Eric Horodyski on 12/11/23.
@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct MiniAppCard: View {
-  let app: MiniApp
+struct WebAppCard: View {
+  let app: WebAppMetadata
   
   var body: some View {
     HStack {
@@ -19,7 +19,7 @@ struct MiniAppCard: View {
         .background(.jsPrimary)
         .cornerRadius(8)
       VStack(alignment: .leading) {
-        Text(app.name)
+        Text(app.displayName)
           .font(.title2)
           .fontWeight(.bold)
           .foregroundColor(.jsNeutralText)
@@ -34,7 +34,7 @@ struct MiniAppCard: View {
 }
 
 #Preview {
-  MiniAppCard(app: MINI_APPS[0])
+    WebAppCard(app: WebApps.metadata[0])
     .padding()
     .themedBackground()
 }
