@@ -9,7 +9,6 @@ import Foundation
 
 struct WebAppMetadata: Hashable {
     var name: String
-    var icon: String
     var description: String
         
     var displayName: String {
@@ -19,8 +18,8 @@ struct WebAppMetadata: Hashable {
 
 struct WebApps {
     static let metadata: [WebAppMetadata] = [
-        WebAppMetadata(name: "expenses", icon: "dollarsign.arrow.circlepath", description: "Submit expenses for business related activities."),
-        WebAppMetadata(name: "tasks", icon: "list.star", description: "Track tasks for transparent project updates."),
-        WebAppMetadata(name: "time-tracking", icon: "person.crop.circle.badge.clock", description: "Stay on schedule by tracking time spent.")
+        WebAppMetadata(name: "expenses", description: "Submit expenses for business purchases."),
+        WebAppMetadata(name: "tasks", description: "Track tasks for transparent project updates."),
+        WebAppMetadata(name: "time-tracking", description: "Stay on schedule by tracking time spent.")
     ]
 }

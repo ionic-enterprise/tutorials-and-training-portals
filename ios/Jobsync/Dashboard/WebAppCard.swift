@@ -16,9 +16,11 @@ struct WebAppCard: View {
     
     var body: some View {
         HStack {
-            Image(systemName: app.icon)
+            Image(app.name)
+                .resizable()
+                .scaledToFit()
                 .frame(width: 48, height: 48)
-                .font(.title)
+                .padding(8)
                 .foregroundColor(.white)
                 .background(.jsPrimary)
                 .cornerRadius(8)
@@ -27,6 +29,7 @@ struct WebAppCard: View {
                     .font(.title2)
                     .fontWeight(.bold)
                     .foregroundColor(.jsNeutralText)
+                    .padding(.bottom, 1)
                 Text(app.description)
                     .foregroundColor(.jsNeutralText)
                     .font(.caption)
