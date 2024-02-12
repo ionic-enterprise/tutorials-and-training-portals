@@ -1,10 +1,8 @@
 /**
- *  TODO: See "Stubbing Initial Context for Development"
+ *  COMPLETE: See "Stubbing Initial Context for Development"
  */
-export const resolveInitialContext = () => ({
-  accessToken: "",
-  refreshToken: "",
-});
+import { resolveInitialContext } from "./initial-context";
+export { resolveInitialContext };
 
 /**
  * TODO: See "Publishing Messages with PubSub"
