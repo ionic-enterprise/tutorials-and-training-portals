@@ -5,9 +5,10 @@ import { resolveInitialContext } from "./initial-context";
 export { resolveInitialContext };
 
 /**
- * TODO: See "Publishing Messages with PubSub"
+ * COMPLETE: See "Publishing Messages with PubSub"
  */
-export const publishNavigateBackMessage = async () => {};
+import { publishNavigateBackMessage } from "./pub-sub";
+export { publishNavigateBackMessage };
 
 /**
  * TODO: See "Implementing a Capacitor Plugin"
