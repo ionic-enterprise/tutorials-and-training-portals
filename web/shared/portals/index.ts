@@ -11,9 +11,7 @@ import { publishNavigateBackMessage } from "./pub-sub";
 export { publishNavigateBackMessage };
 
 /**
- * TODO: See "Implementing a Capacitor Plugin"
+ * COMPLETE: See "Implementing a Capacitor Plugin"
  */
-export const Analytics = {
-  logAction: async (opts: any) => {},
-  logScreen: async (opts: any) => {},
-};
+import { Analytics } from "./analytics-plugin";
+export { Analytics };
