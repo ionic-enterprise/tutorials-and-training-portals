@@ -10,6 +10,8 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@capacitor/core": "~5.7.0",
+    "@ionic/portals": "~0.8.1",
     "@jobsync/api": "workspace:~"
   }
 }

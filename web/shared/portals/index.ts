@@ -1,20 +1,17 @@
 /**
- *  TODO: See "Stubbing Initial Context for Development"
+ *  COMPLETE: See "Stubbing Initial Context for Development"
  */
-export const resolveInitialContext = () => ({
-  accessToken: "",
-  refreshToken: "",
-});
+import { resolveInitialContext } from "./initial-context";
+export { resolveInitialContext };
 
 /**
- * TODO: See "Publishing Messages with PubSub"
+ * COMPLETE: See "Publishing Messages with PubSub"
  */
-export const publishNavigateBackMessage = async () => {};
+import { publishNavigateBackMessage } from "./pub-sub";
+export { publishNavigateBackMessage };
 
 /**
- * TODO: See "Implementing a Capacitor Plugin"
+ * COMPLETE: See "Implementing a Capacitor Plugin"
  */
-export const Analytics = {
-  logAction: async (opts: any) => {},
-  logScreen: async (opts: any) => {},
-};
+import { Analytics } from "./analytics-plugin";
+export { Analytics };
