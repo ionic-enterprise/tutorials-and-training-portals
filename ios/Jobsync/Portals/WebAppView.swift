@@ -14,9 +14,13 @@ struct WebAppView: View {
     let metadata: WebAppMetadata
     
     var body: some View {
-        PortalView(portal: .init(name: "debug", startDir: "portals/debug"))
-            .ignoresSafeArea()
-            .navigationBarBackButtonHidden()
+        PortalView(portal: .init(
+            name: "debug",
+            startDir: "portals/debug",
+            initialContext: credentialsManager.credentials!.toJSObject()
+        ))
+        .ignoresSafeArea()
+        .navigationBarBackButtonHidden()
     }
 }
 

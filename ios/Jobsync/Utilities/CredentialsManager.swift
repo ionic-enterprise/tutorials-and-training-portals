@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import Capacitor
 
 struct Credentials: Decodable {
   var accessToken: String
@@ -14,6 +15,13 @@ struct Credentials: Decodable {
   private enum CodingKeys: String, CodingKey {
     case accessToken = "access_token"
     case refreshToken = "refresh_token"
+  }
+    
+  func toJSObject() -> JSObject {
+    return [
+      "accessToken": self.accessToken,
+      "refreshToken": self.refreshToken
+    ]
   }
 }
 
