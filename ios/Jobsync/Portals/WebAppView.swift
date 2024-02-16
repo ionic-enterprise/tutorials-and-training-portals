@@ -16,8 +16,8 @@ struct WebAppView: View {
     var body: some View {
         PortalView(
             portal: .init(
-                name: "debug",
-                startDir: "portals/debug",
+                name: metadata.name,
+                startDir: "portals/\(metadata.name)",
                 initialContext: credentialsManager.credentials!.toJSObject()
             )
             .adding(AnalyticsPlugin())
