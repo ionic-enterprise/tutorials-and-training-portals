@@ -21,6 +21,12 @@ struct WebAppView: View {
         ))
         .ignoresSafeArea()
         .navigationBarBackButtonHidden()
+        .task {
+            let stream = PortalsPubSub.subscribe(to: "navigate:back")
+            for await _ in stream {
+                self.dismiss()
+            }
+        }
     }
 }
 
