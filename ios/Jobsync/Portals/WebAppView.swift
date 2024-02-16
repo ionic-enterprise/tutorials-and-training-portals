@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import IonicPortals
 
 struct WebAppView: View {
     @EnvironmentObject var credentialsManager: CredentialsManager
@@ -13,7 +14,7 @@ struct WebAppView: View {
     let metadata: WebAppMetadata
     
     var body: some View {
-        Button("Done") { dismiss() }
+        PortalView(portal: .init(name: "debug", startDir: "portals/debug"))
             .ignoresSafeArea()
             .navigationBarBackButtonHidden()
     }

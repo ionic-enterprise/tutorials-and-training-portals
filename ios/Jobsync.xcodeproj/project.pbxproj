@@ -162,6 +162,7 @@
 				07E5CF4C2B1FA64300C64621 /* Sources */,
 				07E5CF4D2B1FA64300C64621 /* Frameworks */,
 				07E5CF4E2B1FA64300C64621 /* Resources */,
+				073855DD2B7FA50A00BC4B8B /* Sync Web Apps */,
 			);
 			buildRules = (
 			);
@@ -226,6 +227,27 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		073855DD2B7FA50A00BC4B8B /* Sync Web Apps */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Sync Web Apps";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=$PATH:/opt/homebrew/bin\nportals sync \n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		07E5CF4C2B1FA64300C64621 /* Sources */ = {
@@ -378,6 +400,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Jobsync/Preview Content\"";
 				DEVELOPMENT_TEAM = 9YN2HU59K8;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jobsync/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -408,6 +431,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Jobsync/Preview Content\"";
 				DEVELOPMENT_TEAM = 9YN2HU59K8;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jobsync/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

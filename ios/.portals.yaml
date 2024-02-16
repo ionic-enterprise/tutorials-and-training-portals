@@ -1,0 +1,3 @@
+sync:
+  - file-path: ../portals-debug-app
+    directory-name: portals/debug
