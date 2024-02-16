@@ -1,0 +1,11 @@
+sync:
+  - file-path: ./portals-debug-app
+    directory-name: app/src/main/assets/portals/debug
+  - file-path: ../web/apps/expenses
+    directory-name: app/src/main/assets/portals/expenses
+  - file-path: ../web/apps/tasks
+    directory-name: app/src/main/assets/portals/tasks
+  - file-path: ../web/apps/time-tracking
+    directory-name: app/src/main/assets/portals/time_tracking
+
+token: ion_qYrLKxVmneVgEUUkiSCQd6CQUsDpHyJqOSBQ36QsKG
