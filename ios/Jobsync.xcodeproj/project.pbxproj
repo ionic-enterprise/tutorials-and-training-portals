@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073855DC2B7FA41E00BC4B8B /* IonicPortals in Frameworks */ = {isa = PBXBuildFile; productRef = 073855DB2B7FA41E00BC4B8B /* IonicPortals */; };
 		073B24C52B45E6C400916747 /* WebAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073B24C42B45E6C400916747 /* WebAppView.swift */; };
 		07E5CF542B1FA64300C64621 /* JobsyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CF532B1FA64300C64621 /* JobsyncApp.swift */; };
 		07E5CF562B1FA64300C64621 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CF552B1FA64300C64621 /* ContentView.swift */; };
@@ -50,6 +51,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F0E6362B28D503005D00BF /* Alamofire in Frameworks */,
+				073855DC2B7FA41E00BC4B8B /* IonicPortals in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -168,6 +170,7 @@
 			name = Jobsync;
 			packageProductDependencies = (
 				07F0E6352B28D503005D00BF /* Alamofire */,
+				073855DB2B7FA41E00BC4B8B /* IonicPortals */,
 			);
 			productName = Jobsync;
 			productReference = 07E5CF502B1FA64300C64621 /* Jobsync.app */;
@@ -199,6 +202,7 @@
 			mainGroup = 07E5CF472B1FA64300C64621;
 			packageReferences = (
 				07F0E6342B28D503005D00BF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				073855DA2B7FA41E00BC4B8B /* XCRemoteSwiftPackageReference "ionic-portals-ios" */,
 			);
 			productRefGroup = 07E5CF512B1FA64300C64621 /* Products */;
 			projectDirPath = "";
@@ -448,6 +452,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		073855DA2B7FA41E00BC4B8B /* XCRemoteSwiftPackageReference "ionic-portals-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ionic-team/ionic-portals-ios";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.10.0;
+			};
+		};
 		07F0E6342B28D503005D00BF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -459,6 +471,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		073855DB2B7FA41E00BC4B8B /* IonicPortals */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 073855DA2B7FA41E00BC4B8B /* XCRemoteSwiftPackageReference "ionic-portals-ios" */;
+			productName = IonicPortals;
+		};
 		07F0E6352B28D503005D00BF /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 07F0E6342B28D503005D00BF /* XCRemoteSwiftPackageReference "Alamofire" */;
