@@ -14,11 +14,14 @@ struct WebAppView: View {
     let metadata: WebAppMetadata
     
     var body: some View {
-        PortalView(portal: .init(
-            name: "debug",
-            startDir: "portals/debug",
-            initialContext: credentialsManager.credentials!.toJSObject()
-        ))
+        PortalView(
+            portal: .init(
+                name: "debug",
+                startDir: "portals/debug",
+                initialContext: credentialsManager.credentials!.toJSObject()
+            )
+            .adding(AnalyticsPlugin())
+        )
         .ignoresSafeArea()
         .navigationBarBackButtonHidden()
         .task {
