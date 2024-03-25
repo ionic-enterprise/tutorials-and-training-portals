@@ -10,10 +10,12 @@ class AnalyticsPlugin: Plugin() {
     @PluginMethod()
     fun logAction(call: PluginCall) {
         println("AnalyticsPlugin: logAction")
+        call.resolve()
     }
 
     @PluginMethod()
     fun logScreen(call: PluginCall) {
         println("AnalyticsPlugin: logScreen")
+        call.resolve()
     }
 }

@@ -29,7 +29,7 @@ fun WebAppView(
 
     val portal = PortalBuilder(metadata.name)
         .setStartDir("portals/${metadata.name}")
-        .setInitialContext(Gson().toJson(credentials))
+        .setInitialContext(mapOf("accessToken" to credentials?.access_token, "refreshToken" to credentials?.refresh_token))
         .addPlugin(AnalyticsPlugin::class.java)
         .addPluginInstance(PortalsPlugin(pubsub))
         .create();
