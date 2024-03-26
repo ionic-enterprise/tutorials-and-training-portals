@@ -7,11 +7,6 @@ import com.google.gson.Gson
 import io.ionic.cs.portals.Jobsync.network.ApiClient
 import io.ionic.portals.PortalBuilder
 import io.ionic.portals.PortalView
-import io.ionic.portals.PortalsPlugin
-import io.ionic.portals.PortalsPubSub
-import kotlinx.coroutines.CoroutineScope
-import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.launch
 
 @Composable
 fun WebAppView(
@@ -19,19 +14,11 @@ fun WebAppView(
     metadata: WebAppMetadata
 ) {
     val credentials = ApiClient.credentials
-    val pubsub = PortalsPubSub()
-    pubsub.subscribe("navigate:back") {
-        CoroutineScope(Dispatchers.Main).launch {
-            navHostController.popBackStack()
-        }
-        pubsub.unsubscribe("navigate:back", it.subscriptionRef)
-    }
+    val jsonCredentials = Gson().toJson(credentials)
 
     val portal = PortalBuilder(metadata.name)
         .setStartDir("portals/${metadata.name}")
-        .setInitialContext(mapOf("accessToken" to credentials?.access_token, "refreshToken" to credentials?.refresh_token))
-        .addPlugin(AnalyticsPlugin::class.java)
-        .addPluginInstance(PortalsPlugin(pubsub))
+        .setInitialContext(jsonCredentials)
         .create();
 
     AndroidView(factory = {
