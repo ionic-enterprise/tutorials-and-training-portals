@@ -3,7 +3,6 @@ package io.ionic.cs.portals.Jobsync.portals
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.viewinterop.AndroidView
 import androidx.navigation.NavHostController
-import com.google.gson.Gson
 import io.ionic.cs.portals.Jobsync.network.ApiClient
 import io.ionic.portals.PortalBuilder
 import io.ionic.portals.PortalView
@@ -19,6 +18,7 @@ fun WebAppView(
     metadata: WebAppMetadata
 ) {
     val credentials = ApiClient.credentials
+    val credentialsMap = mapOf("accessToken" to credentials?.access_token, "refreshToken" to credentials?.refresh_token)
     val pubsub = PortalsPubSub()
     pubsub.subscribe("navigate:back") {
         CoroutineScope(Dispatchers.Main).launch {
@@ -29,10 +29,10 @@ fun WebAppView(
 
     val portal = PortalBuilder(metadata.name)
         .setStartDir("portals/${metadata.name}")
-        .setInitialContext(mapOf("accessToken" to credentials?.access_token, "refreshToken" to credentials?.refresh_token))
+        .setInitialContext(credentialsMap)
         .addPlugin(AnalyticsPlugin::class.java)
         .addPluginInstance(PortalsPlugin(pubsub))
-        .create();
+        .create()
 
     AndroidView(factory = {
         PortalView(it, portal)

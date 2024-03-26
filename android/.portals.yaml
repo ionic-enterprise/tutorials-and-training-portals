@@ -1,6 +1,4 @@
 sync:
-  - file-path: ./portals-debug-app
-    directory-name: app/src/main/assets/portals/debug
   - file-path: ../web/apps/expenses
     directory-name: app/src/main/assets/portals/expenses
   - file-path: ../web/apps/tasks

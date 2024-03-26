@@ -13,10 +13,20 @@ data class LoginBody(val username: String, val password: String)
 @Keep
 data class Credentials(val access_token: String, val refresh_token: String)
 
+@Keep
+data class AnalyticsBody(val action: String?, val screen: String?, val params: String?, val platform: String)
+
+@Keep
+data class AnalyticsResult(val success: Boolean)
+
 interface ApiService {
     @POST("auth")
     @Headers("x-api-key: kRJoNgYv0z4jK8YyhhzJU94HEJCWPUeG1UzTRkAF")
     fun login(@Body() loginCredentials: LoginBody): Call<Credentials>
+
+    @POST("analytics")
+    @Headers("x-api-key: kRJoNgYv0z4jK8YyhhzJU94HEJCWPUeG1UzTRkAF")
+    fun analytics(@Body() analyticsBody: AnalyticsBody): Call<AnalyticsResult>
 }
 
 object RetrofitClient {

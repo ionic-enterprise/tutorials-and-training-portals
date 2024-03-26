@@ -47,7 +47,7 @@ fun LoginScreen(navHostController: NavHostController) {
         OutlinedCard(modifier = Modifier.padding(10.dp)) {
             Column(modifier = Modifier.padding(10.dp)) {
                 Image(
-                    painter = painterResource(id = R.drawable.logo),
+                    painter = painterResource(id = R.drawable.debug),
                     contentDescription = "Hi",
                     modifier = Modifier
                         .size(150.dp)
