@@ -15,10 +15,9 @@ import retrofit2.Response
 class AnalyticsPlugin: Plugin() {
     @PluginMethod()
     fun logAction(call: PluginCall) {
-        call.getString("action")?.let {action ->
-            val params = call.getObject("params")?.let {
-                it.toString()
-            } ?: ""
+        val action = call.getString("action")
+        if (action != null) {
+            val params = call.getObject("params")?.toString() ?: ""
 
             val input = AnalyticsBody(action = action, screen = null, params = params, platform = "android")
             logEvent(input) {
@@ -26,16 +25,15 @@ class AnalyticsPlugin: Plugin() {
                 else call.reject("Something went wrong")
             }
 
-        } ?: call.reject("Input option 'action' must be provided.")
+        } else call.reject("Input option 'action' must be provided.")
 
     }
 
     @PluginMethod()
     fun logScreen(call: PluginCall) {
-        call.getString("screen")?.let {screen ->
-            val params = call.getObject("params")?.let {
-                it.toString()
-            } ?: ""
+        val screen = call.getString("screen")
+        if (screen != null) {
+            val params = call.getObject("params")?.toString() ?: ""
 
             val input = AnalyticsBody(action = null, screen = screen, params = params, platform = "android")
             logEvent(input) {
@@ -43,7 +41,7 @@ class AnalyticsPlugin: Plugin() {
                 else call.reject("Something went wrong")
             }
 
-        } ?: call.reject("Input option 'action' must be provided.")
+        } else call.reject("Input option 'action' must be provided.")
     }
 
     private fun logEvent(input: AnalyticsBody, completion: (Boolean) -> Unit) {
