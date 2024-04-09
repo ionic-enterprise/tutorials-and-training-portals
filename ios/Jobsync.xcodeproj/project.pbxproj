@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073855DC2B7FA41E00BC4B8B /* IonicPortals in Frameworks */ = {isa = PBXBuildFile; productRef = 073855DB2B7FA41E00BC4B8B /* IonicPortals */; };
+		073855DF2B7FAC1000BC4B8B /* AnalyticsPlugin.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073855DE2B7FAC1000BC4B8B /* AnalyticsPlugin.swift */; };
 		073B24C52B45E6C400916747 /* WebAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073B24C42B45E6C400916747 /* WebAppView.swift */; };
 		07E5CF542B1FA64300C64621 /* JobsyncApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CF532B1FA64300C64621 /* JobsyncApp.swift */; };
 		07E5CF562B1FA64300C64621 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07E5CF552B1FA64300C64621 /* ContentView.swift */; };
@@ -26,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		073855DE2B7FAC1000BC4B8B /* AnalyticsPlugin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnalyticsPlugin.swift; sourceTree = "<group>"; };
 		073B24C42B45E6C400916747 /* WebAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WebAppView.swift; sourceTree = "<group>"; };
 		07E5CF502B1FA64300C64621 /* Jobsync.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Jobsync.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		07E5CF532B1FA64300C64621 /* JobsyncApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JobsyncApp.swift; sourceTree = "<group>"; };
@@ -50,6 +53,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				07F0E6362B28D503005D00BF /* Alamofire in Frameworks */,
+				073855DC2B7FA41E00BC4B8B /* IonicPortals in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,6 +133,7 @@
 			children = (
 				07E5CFDC2B27AD1600C64621 /* WebApps.swift */,
 				073B24C42B45E6C400916747 /* WebAppView.swift */,
+				073855DE2B7FAC1000BC4B8B /* AnalyticsPlugin.swift */,
 			);
 			path = Portals;
 			sourceTree = "<group>";
@@ -160,6 +165,7 @@
 				07E5CF4C2B1FA64300C64621 /* Sources */,
 				07E5CF4D2B1FA64300C64621 /* Frameworks */,
 				07E5CF4E2B1FA64300C64621 /* Resources */,
+				073855DD2B7FA50A00BC4B8B /* Sync Web Apps */,
 			);
 			buildRules = (
 			);
@@ -168,6 +174,7 @@
 			name = Jobsync;
 			packageProductDependencies = (
 				07F0E6352B28D503005D00BF /* Alamofire */,
+				073855DB2B7FA41E00BC4B8B /* IonicPortals */,
 			);
 			productName = Jobsync;
 			productReference = 07E5CF502B1FA64300C64621 /* Jobsync.app */;
@@ -199,6 +206,7 @@
 			mainGroup = 07E5CF472B1FA64300C64621;
 			packageReferences = (
 				07F0E6342B28D503005D00BF /* XCRemoteSwiftPackageReference "Alamofire" */,
+				073855DA2B7FA41E00BC4B8B /* XCRemoteSwiftPackageReference "ionic-portals-ios" */,
 			);
 			productRefGroup = 07E5CF512B1FA64300C64621 /* Products */;
 			projectDirPath = "";
@@ -223,6 +231,27 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		073855DD2B7FA50A00BC4B8B /* Sync Web Apps */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "Sync Web Apps";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "export PATH=$PATH:/opt/homebrew/bin\nportals sync \n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		07E5CF4C2B1FA64300C64621 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -239,6 +268,7 @@
 				07F0E6422B2B4E22005D00BF /* LoginView.swift in Sources */,
 				07F0E6492B2C9C90005D00BF /* View+ThemedBackground.swift in Sources */,
 				07E5CF542B1FA64300C64621 /* JobsyncApp.swift in Sources */,
+				073855DF2B7FAC1000BC4B8B /* AnalyticsPlugin.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,6 +404,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Jobsync/Preview Content\"";
 				DEVELOPMENT_TEAM = 9YN2HU59K8;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jobsync/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -404,6 +435,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"Jobsync/Preview Content\"";
 				DEVELOPMENT_TEAM = 9YN2HU59K8;
 				ENABLE_PREVIEWS = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Jobsync/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -448,6 +480,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		073855DA2B7FA41E00BC4B8B /* XCRemoteSwiftPackageReference "ionic-portals-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ionic-team/ionic-portals-ios";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 0.10.0;
+			};
+		};
 		07F0E6342B28D503005D00BF /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -459,6 +499,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		073855DB2B7FA41E00BC4B8B /* IonicPortals */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 073855DA2B7FA41E00BC4B8B /* XCRemoteSwiftPackageReference "ionic-portals-ios" */;
+			productName = IonicPortals;
+		};
 		07F0E6352B28D503005D00BF /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 07F0E6342B28D503005D00BF /* XCRemoteSwiftPackageReference "Alamofire" */;

@@ -6,9 +6,14 @@
 //
 
 import SwiftUI
+import IonicPortals
 
 @main
 struct JobsyncApp: App {
+    init() {
+        PortalsRegistrationManager.shared.register(key: "YOUR_KEY_HERE")
+    }
+    
     var body: some Scene {
         WindowGroup {
           ContentView()

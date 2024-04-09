@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import IonicPortals
 
 struct WebAppView: View {
     @EnvironmentObject var credentialsManager: CredentialsManager
@@ -13,9 +14,22 @@ struct WebAppView: View {
     let metadata: WebAppMetadata
     
     var body: some View {
-        Button("Done") { dismiss() }
-            .ignoresSafeArea()
-            .navigationBarBackButtonHidden()
+        PortalView(
+            portal: .init(
+                name: metadata.name,
+                startDir: "portals/\(metadata.name)",
+                initialContext: credentialsManager.credentials!.toJSObject()
+            )
+            .adding(AnalyticsPlugin())
+        )
+        .ignoresSafeArea()
+        .navigationBarBackButtonHidden()
+        .task {
+            let stream = PortalsPubSub.subscribe(to: "navigate:back")
+            for await _ in stream {
+                self.dismiss()
+            }
+        }
     }
 }
 
