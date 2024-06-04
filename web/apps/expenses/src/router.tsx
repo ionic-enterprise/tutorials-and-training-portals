@@ -11,13 +11,13 @@ import ExpensesList from "./pages/ExpensesList";
 import ExpenseForm from "./pages/ExpenseForm";
 import { getExpense, getExpenses } from "./api";
 
-const expensesLoader = async () => {
+export const expensesLoader = async () => {
   await Analytics.logScreen({ screen: "Expenses List" });
   await refreshSessionIfNeeded();
   return getExpenses(session?.sub);
 };
 
-const editExpenseLoader = async ({ params }: LoaderFunctionArgs) => {
+export const editExpenseLoader = async ({ params }: LoaderFunctionArgs) => {
   await refreshSessionIfNeeded();
   const expense = await getExpense(params.id!);
   if (!expense) return redirect("/expenses/new");
@@ -25,7 +25,7 @@ const editExpenseLoader = async ({ params }: LoaderFunctionArgs) => {
   return expense;
 };
 
-const newExpenseLoader = async () => {
+export const newExpenseLoader = async () => {
   await refreshSessionIfNeeded();
   await Analytics.logScreen({ screen: "New Expense" });
   return null;

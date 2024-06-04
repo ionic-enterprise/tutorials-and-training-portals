@@ -6,7 +6,7 @@ interface AnalyticsPlugin {
   logScreen(opts: { screen: string; params?: any }): Promise<void>;
 }
 
-class AnalyticsWeb extends WebPlugin implements AnalyticsPlugin {
+export class AnalyticsWeb extends WebPlugin implements AnalyticsPlugin {
   async logAction(opts: { action: string; params?: any }): Promise<void> {
     const { action, params } = opts;
     await httpClient.post("/analytics", { action, params, platform: "web" });
