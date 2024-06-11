@@ -39,8 +39,8 @@ fun WebAppScreen(navController: NavHostController, metadata: WebAppMetadata) {
       AndroidView(
         modifier = Modifier.fillMaxSize(),
         factory = { context ->
-          val portal = PortalBuilder("debug")
-            .setStartDir("portals/debug")
+          val portal = PortalBuilder(metadata.name)
+            .setStartDir("portals/${metadata.name}")
             .setInitialContext(CredentialsManager.credentials!!.toMap())
             .addPlugin(AnalyticsPlugin::class.java)
             .addPluginInstance(PortalsPlugin(pubSub))

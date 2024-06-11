@@ -1,3 +1,7 @@
 sync:
-  - file-path: ../../portals-debug-app
-    directory-name: src/main/assets/portals/debug
+  - file-path: ../../web/apps/expenses/dist
+    directory-name: src/main/assets/portals/expenses
+  - file-path: ../../web/apps/tasks/dist
+    directory-name: src/main/assets/portals/tasks
+  - file-path: ../../web/apps/time-tracking/dist
+    directory-name: src/main/assets/portals/time_tracking
