@@ -7,11 +7,22 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 import retrofit2.http.Body
 import retrofit2.http.POST
+import com.google.gson.annotations.SerializedName
 
 @Keep
 data class LoginBody(val username: String, val password: String)
 @Keep
-data class Credentials(val access_token: String, val refresh_token: String)
+data class Credentials(
+  @SerializedName("access_token") val accessToken: String,
+  @SerializedName("refresh_token") val refreshToken: String
+) {
+  fun toMap(): Map<String, String> {
+    return mapOf(
+      "accessToken" to accessToken,
+      "refreshToken" to refreshToken
+    )
+  }
+}
 
 interface CredentialsAPIService {
   @POST("auth")
