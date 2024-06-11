@@ -72,3 +72,15 @@ dependencies {
   debugImplementation(libs.androidx.ui.tooling)
   debugImplementation(libs.androidx.ui.test.manifest)
 }
+
+tasks.preBuild {
+  dependsOn("syncPortals")
+}
+
+tasks.register("syncPortals") {
+  doLast {
+    project.exec {
+      commandLine("portals", "sync")
+    }
+  }
+}
