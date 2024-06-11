@@ -10,6 +10,7 @@ import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.compose.ui.viewinterop.AndroidView
+import io.ionic.cs.portals.Jobsync.portals.AnalyticsPlugin
 import io.ionic.cs.portals.jobsync.util.CredentialsManager
 import io.ionic.portals.PortalBuilder
 import io.ionic.portals.PortalView
@@ -41,6 +42,7 @@ fun WebAppScreen(navController: NavHostController, metadata: WebAppMetadata) {
           val portal = PortalBuilder("debug")
             .setStartDir("portals/debug")
             .setInitialContext(CredentialsManager.credentials!!.toMap())
+            .addPlugin(AnalyticsPlugin::class.java)
             .addPluginInstance(PortalsPlugin(pubSub))
             .create()
           PortalView(context, portal)
