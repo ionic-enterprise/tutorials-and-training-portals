@@ -13,9 +13,22 @@ import androidx.compose.ui.viewinterop.AndroidView
 import io.ionic.cs.portals.jobsync.util.CredentialsManager
 import io.ionic.portals.PortalBuilder
 import io.ionic.portals.PortalView
+import io.ionic.portals.PortalsPlugin
+import io.ionic.portals.PortalsPubSub
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 
 @Composable
 fun WebAppScreen(navController: NavHostController, metadata: WebAppMetadata) {
+  val pubSub = PortalsPubSub()
+  pubSub.subscribe("navigate:back") {
+    CoroutineScope(Dispatchers.Main).launch {
+      navController.popBackStack()
+    }
+    pubSub.unsubscribe("navigate:back", it.subscriptionRef)
+  }
+
   Scaffold { innerPadding ->
     Column(
       Modifier.fillMaxSize().padding(innerPadding),
@@ -28,6 +41,7 @@ fun WebAppScreen(navController: NavHostController, metadata: WebAppMetadata) {
           val portal = PortalBuilder("debug")
             .setStartDir("portals/debug")
             .setInitialContext(CredentialsManager.credentials!!.toMap())
+            .addPluginInstance(PortalsPlugin(pubSub))
             .create()
           PortalView(context, portal)
         })
