@@ -55,9 +55,9 @@ Build and run the application.
 
 ### Android
 
-Open the Android project located in `/android/jobsync` in Android Studio.
+Open the Android project located in `/android` in Android Studio.
 
-Uncomment the following line in `JobsyncApp.kt` and replace `YOUR_KEY_HERE` with your key:
+Uncomment the following line in `Jobsync.kt` and replace `YOUR_KEY_HERE` with your key:
 
 ```kotlin
 // Register Portals
