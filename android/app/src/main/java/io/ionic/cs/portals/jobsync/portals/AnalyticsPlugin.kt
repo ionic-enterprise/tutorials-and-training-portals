@@ -1,4 +1,4 @@
-package io.ionic.cs.portals.Jobsync.portals
+package io.ionic.cs.portals.jobsync.portals
 
 import com.getcapacitor.Plugin
 import com.getcapacitor.PluginCall
