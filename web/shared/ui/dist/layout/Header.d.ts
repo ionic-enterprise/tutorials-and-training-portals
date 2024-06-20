@@ -1,3 +1,7 @@
 /// <reference types="react" />
 import { BoxProps } from "@mui/joy";
-export declare const Header: React.FC<BoxProps>;
+type HeaderProps = BoxProps & {
+    endBar?: JSX.Element;
+};
+export declare const Header: (props: HeaderProps) => import("react/jsx-runtime").JSX.Element;
+export {};
