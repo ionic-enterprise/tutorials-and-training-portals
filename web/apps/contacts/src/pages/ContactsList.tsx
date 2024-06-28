@@ -3,15 +3,13 @@ import { publishNavigateBackMessage } from "@jobsync/portals";
 import { useLoaderData } from "react-router-dom";
 import { Contact } from "../api";
 import { List, Sheet } from "@mui/joy";
-import { ContactCard } from "../components";
-import { useState } from "react";
+import { ContactCard, Searchbar } from "../components";
+import { ChangeEvent, useState } from "react";
 
 const ContactsList: React.FC = () => {
   const initialContacts = useLoaderData() as Contact[];
-  // eslint-disable-next-line @typescript-eslint/no-unused-vars
-  const [contacts] = useState(initialContacts);
+  const [contacts, setContacts] = useState(initialContacts);
 
-  /*
   const filter = (event: ChangeEvent<HTMLInputElement>) => {
     const query = event.target.value.trim().toLowerCase();
     if (!query.length) {
@@ -23,12 +21,10 @@ const ContactsList: React.FC = () => {
       setContacts(filtered);
     }
   };
-  */
 
   return (
     <Layout>
-      {/* <Layout.Header endBar={<Searchbar onChange={filter} />}> */}
-      <Layout.Header>
+      <Layout.Header endBar={<Searchbar onChange={filter} />}>
         <Layout.BackButton onClick={publishNavigateBackMessage} />
         <Layout.Title title="Contacts" />
       </Layout.Header>
