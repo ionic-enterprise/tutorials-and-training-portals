@@ -1,0 +1,10 @@
+{
+  "apps": [
+    {
+      "appId": "b5e647f7",
+      "root": "web/apps/contacts",
+      "dependencyInstallCommand": ":",
+      "webBuildCommand": ":"
+    }
+  ]
+}

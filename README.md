@@ -32,6 +32,7 @@ The following commands will run their respective packages:
 - `pnpm run --filter="expenses" dev`
 - `pnpm run --filter="tasks" dev`
 - `pnpm run --filter="time-tracking" dev`
+- `pnpm run --filter="contacts" dev`
 
 Each micro frontend is set to run on a different port; you can run all three web applications at once. 
 
