@@ -43,8 +43,12 @@ fun WebAppScreen(navController: NavHostController, metadata: WebAppMetadata) {
             .setInitialContext(CredentialsManager.credentials!!.toMap())
             .addPlugin(AnalyticsPlugin::class.java)
             .addPluginInstance(PortalsPlugin(pubSub))
-            .create()
-          PortalView(context, portal)
+
+          if(metadata.liveUpdate != null) {
+            portal.setLiveUpdateConfig(context, metadata.liveUpdate)
+          }
+
+          PortalView(context, portal.create())
         })
     }
   }

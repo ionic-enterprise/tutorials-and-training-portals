@@ -64,6 +64,7 @@ dependencies {
   implementation(libs.retrofit)
   implementation(libs.converter.gson)
   implementation(libs.portals)
+  implementation(libs.liveupdates)
   testImplementation(libs.junit)
   androidTestImplementation(libs.androidx.junit)
   androidTestImplementation(libs.androidx.espresso.core)

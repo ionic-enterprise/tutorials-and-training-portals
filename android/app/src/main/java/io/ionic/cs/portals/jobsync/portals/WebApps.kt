@@ -1,10 +1,15 @@
 package io.ionic.cs.portals.jobsync.portals
 
-import android.media.Image
 import io.ionic.cs.portals.jobsync.R
+import io.ionic.liveupdates.LiveUpdate
 import java.util.Locale
 
-data class WebAppMetadata(val name: String, val description: String, val imageResource: Int) {
+data class WebAppMetadata(
+  val name: String,
+  val description: String,
+  val imageResource: Int,
+  val liveUpdate: LiveUpdate? = null
+) {
   val displayName get() = name.replace('_', ' ').split(" ").joinToString(" ") { name ->
     name.replaceFirstChar { if (it.isLowerCase()) it.titlecase(Locale.getDefault()) else it.toString() }
   }
@@ -16,8 +21,13 @@ class WebApps {
       WebAppMetadata("expenses", "Submit expenses for business purposes.", R.drawable.expenses),
       WebAppMetadata("tasks", "Track tasks for transparent project updates.", R.drawable.tasks),
       WebAppMetadata("time_tracking", "Stay on schedule by tracking time spent.", R.drawable.time_tracking),
-      WebAppMetadata("contacts", "Quickly locate and update contact records.", R.drawable.contacts)
+      WebAppMetadata(
+        "contacts",
+        "Quickly locate and update contact records.",
+        R.drawable.contacts,
+        LiveUpdate("b5e647f7", "production")
       )
+    )
   }
 }
 
