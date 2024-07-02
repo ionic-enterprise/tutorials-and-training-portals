@@ -5,3 +5,7 @@ sync:
     directory-name: src/main/assets/portals/tasks
   - file-path: ../../web/apps/time-tracking/dist
     directory-name: src/main/assets/portals/time_tracking
+  - app-id: b5e647f7
+    channel: initial
+    directory-name: src/main/assets/portals/contacts
+token: ion_iZtdsDl9mOxcVSXEaRiWb8GU45Ld8aSotFii25crF0

@@ -15,9 +15,9 @@ class WebApps {
     val metadata: List<WebAppMetadata> = listOf(
       WebAppMetadata("expenses", "Submit expenses for business purposes.", R.drawable.expenses),
       WebAppMetadata("tasks", "Track tasks for transparent project updates.", R.drawable.tasks),
-      WebAppMetadata("time_tracking", "Stay on schedule by tracking time spent.", R.drawable.time_tracking)
-    )
+      WebAppMetadata("time_tracking", "Stay on schedule by tracking time spent.", R.drawable.time_tracking),
+      WebAppMetadata("contacts", "Quickly locate and update contact records.", R.drawable.contacts)
+      )
   }
-
 }
 

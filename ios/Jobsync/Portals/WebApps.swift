@@ -22,6 +22,7 @@ struct WebApps {
 	static let metadata: [WebAppMetadata] = [
 		WebAppMetadata(name: "expenses", description: "Submit expenses for business purchases."),
 		WebAppMetadata(name: "tasks", description: "Track tasks for transparent project updates."),
-		WebAppMetadata(name: "time-tracking", description: "Stay on schedule by tracking time spent.")
+		WebAppMetadata(name: "time-tracking", description: "Stay on schedule by tracking time spent."),
+		WebAppMetadata(name: "contacts", description: "Quickly locate and update contact records.")
 	]
 }
