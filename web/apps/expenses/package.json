@@ -14,7 +14,7 @@
     "@jobsync/api": "workspace:~",
     "@jobsync/portals": "workspace:~",
     "@jobsync/ui": "workspace:^",
-    "axios": "~1.8.2",
+    "axios": "~1.13.5",
     "react-hook-form": "~7.46.1",
     "uuid": "~9.0.1",
     "yup": "~1.2.0"
