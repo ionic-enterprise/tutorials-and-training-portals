@@ -16,7 +16,7 @@
     "@jobsync/ui": "workspace:^",
     "axios": "~1.8.2",
     "react-hook-form": "~7.46.1",
-    "uuid": "~9.0.1",
+    "uuid": "~14.0.0",
     "yup": "~1.2.0"
   },
   "devDependencies": {
